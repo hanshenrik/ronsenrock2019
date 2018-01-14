@@ -13,7 +13,7 @@ type alias Model =
 
 init : ( Model, Cmd Msg )
 init =
-    ( {}, initializeJquery () )
+    ( {}, initializeJS () )
 
 
 
@@ -69,4 +69,4 @@ main =
 -- SUBSCRIPTIONS
 
 
-port initializeJquery : () -> Cmd msg
+port initializeJS : () -> Cmd msg

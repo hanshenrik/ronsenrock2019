@@ -7,7 +7,7 @@ var app = Main.embed(document.getElementById('root'));
 registerServiceWorker();
 
 // Initilize JS stuff when Elm is ready
-app.ports.initializeJquery.subscribe(function () {
+app.ports.initializeJS.subscribe(function () {
   $('#countdown').TimeCircles({
     animation: 'smooth',
     circle_bg_color: '#f1f2f3',
