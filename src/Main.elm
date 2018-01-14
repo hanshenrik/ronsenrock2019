@@ -38,12 +38,14 @@ view model =
     div [ class "wrapper" ]
         [ header [] [ text "RØNSENROCK 2018" ]
         , div [ class "main" ]
-            [ div
+            [ div [] [ text "Bare" ]
+            , div
                 [ id "countdown"
                 , attribute "data-date" "2018-06-05 12:00:00"
                 , style [ ( "width", "100%" ) ]
                 ]
                 []
+            , div [] [ text "igjen." ]
             ]
         , footer [] [ text "✌️" ]
         ]
