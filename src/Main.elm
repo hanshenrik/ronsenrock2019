@@ -36,16 +36,9 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ class "wrapper" ]
-        [ header [] [ text "RØNSENROCK 2018" ]
-        , div [ class "main" ]
-            [ div [] [ text "Bare" ]
-            , div
-                [ id "countdown"
-                , attribute "data-date" "2018-06-05 12:00:00"
-                , style [ ( "width", "100%" ) ]
-                ]
-                []
-            , div [] [ text "igjen." ]
+        [ div [ class "main" ]
+            [ img [ src "/logo-2018.jpg", alt "RønsenRock-logo 2018"  ] []
+            , div [ id "countdown" , attribute "data-date" "2018-06-05 12:00:00" ] []
             ]
         , footer [] [ text "✌️" ]
         ]
