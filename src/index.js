@@ -36,4 +36,17 @@ app.ports.initializeJS.subscribe(function () {
       }
     }
   });
+
+  // Initialize Google Map
+  const mapDiv = document.getElementById('map');
+  const position = new google.maps.LatLng(60.367031, 11.256877);
+  const mapOptions = {
+    zoom: 9,
+    center: position,
+  };
+  const gmap = new google.maps.Map(mapDiv, mapOptions);
+  const marker = new google.maps.Marker({
+    position: position,
+    map: gmap,
+  });
 });

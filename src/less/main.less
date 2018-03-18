@@ -7,6 +7,11 @@ body {
   font-weight: 300;
 }
 
+img {
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
 .wrapper {
   height: 100%;
   display: flex;
@@ -21,6 +26,7 @@ body {
   align-items: center;
   justify-content: center;
 
+  padding: 1rem;
   min-height: 50%;
   width: 100%;
   @media (min-width: 992px) {
@@ -44,11 +50,25 @@ footer {
   font-size: 0.8rem;
 }
 
-img {
-  margin: 1rem 0;
-  max-width: 100%;
+.directions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+  > div {
+    padding: 0 1rem;
+  }
 }
 
 #countdown {
   width: 100%;
+}
+
+#map, iframe {
+  height: 300px;
+  width: 500px;
+  max-width: 80%;
+  border: none;
 }
