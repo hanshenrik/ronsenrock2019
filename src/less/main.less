@@ -14,13 +14,6 @@ body {
 
 img {
   max-width: 100%;
-
-  &#logo {
-    margin: 1rem 0;
-    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.9);
-    height: 60vh;
-    max-width: 90%;
-  }
 }
 
 .divider-img-wrapper {
@@ -29,6 +22,7 @@ img {
   background-position: center;
   background-size: cover;
   position: relative;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.4);
 
   .caption {
     position: absolute;
@@ -108,6 +102,24 @@ h1, h2, h3, h4, h5, h6 {
 .section {
   padding: 1rem;
   margin: 2rem 0;
+}
+
+header {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.8);
+
+  margin-bottom: 1rem;
+
+  #logo {
+    max-height: 90vh;
+    max-width: 90%;
+  }
 }
 
 footer {
