@@ -39,7 +39,7 @@ app.ports.initializeJS.subscribe(function () {
 
   // Initialize Google Map
   const mapDiv = document.getElementById('map');
-  const position = new google.maps.LatLng(60.367031, 11.256877);
+  const position = new google.maps.LatLng(60.368553, 11.256755);
   const mapOptions = {
     zoom: 10,
     center: position,
