@@ -10,7 +10,7 @@ registerServiceWorker();
 app.ports.initializeJS.subscribe(function () {
   $('#countdown').TimeCircles({
     animation: 'smooth',
-    circle_bg_color: '#f1f2f3',
+    circle_bg_color: '#dedede',
     bg_width: 0.2,
     fg_width: 0.05,
     time: {
@@ -41,7 +41,7 @@ app.ports.initializeJS.subscribe(function () {
   const mapDiv = document.getElementById('map');
   const position = new google.maps.LatLng(60.367031, 11.256877);
   const mapOptions = {
-    zoom: 9,
+    zoom: 10,
     center: position,
   };
   const gmap = new google.maps.Map(mapDiv, mapOptions);

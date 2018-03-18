@@ -1,23 +1,65 @@
+@black: #222222;
+@white: #fbfbfb;
+@lightgreen: #95eb95;
+@darkgreen: #3aa53a;
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #000000;
-  color: #f1f2f3;
-  font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
+  background-color: @white;
+  color: @black;
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
   font-weight: 300;
 }
 
 img {
-  margin: 1rem 0;
   max-width: 100%;
+
+  &#logo {
+    margin: 1rem 0;
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.9);
+    height: 60vh;
+    max-width: 90%;
+  }
+}
+
+.divider-img-wrapper {
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  .caption {
+    position: absolute;
+    color: @white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    bottom: 0;
+    right: 0;
+    font-size: 0.9rem;
+
+    &::before {
+      content: '📷 ';
+    }
+  }
+}
+
+a, a:focus, a:active, a:visited {
+  transition: all 0.2s ease-in-out;
+  color: @darkgreen;
+  &:hover {
+    color: lighten(@darkgreen, 20%);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-family: 'Rammetto One';
 }
 
 .wrapper {
   height: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -30,49 +72,49 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
 
-  padding: 1rem;
-  min-height: 50%;
-  width: 100%;
-  @media (min-width: 992px) {
-    width: 80%;
+  > *:not(.divider-img-wrapper) {
+    max-width: 60%;
+    @media (max-width: 768px) {
+      max-width: 80%;
+    }
+  }
+
+  .directions {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    > div {
+      padding: 0 1rem;
+    }
+
+    > #map, iframe {
+      height: 500px;
+      max-height: 50vh;
+      width: 500px;
+      min-width: 40%;
+      @media (max-width: 768px) {
+        width: 80%;
+      }
+      border: none;
+    }
   }
 }
 
-header {
-  padding: 2rem;
-  text-align: center;
-
-  font-family: 'Monoton';
-  font-size: 2rem;
-  @media (min-width: 768px) {
-    font-size: 5rem;
-  }
+.section {
+  padding: 1rem;
+  margin: 2rem 0;
 }
 
 footer {
   padding: 1rem;
-  font-size: 0.8rem;
-}
-
-.directions {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-  }
-  > div {
-    padding: 0 1rem;
-  }
+  font-size: 2rem;
 }
 
 #countdown {
   width: 100%;
-}
-
-#map, iframe {
-  height: 300px;
-  width: 500px;
-  max-width: 80%;
-  border: none;
 }
