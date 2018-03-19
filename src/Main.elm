@@ -53,7 +53,10 @@ embeddedSlippyMap =
 view : Model -> Html Msg
 view model =
     div [ class "wrapper" ]
-        [ header [] [ img [ id "logo", src "/images/logo-2018.jpg", alt "RønsenRock-logo 2018"  ] [] ]
+        [ header []
+            [ canvas [ id "canvas" ] []
+            , div [ id "logo" ] []
+            ]
         , div [ class "main" ]
             [ div [ id "countdown" , attribute "data-date" "2018-06-05 12:00:00" ] []
             , h1 [] [ text "Program" ]
