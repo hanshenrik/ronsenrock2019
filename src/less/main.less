@@ -33,21 +33,10 @@ iframe {
   width: 30%;
 }
 
-.attribution-core {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: @white;
-  text-align: right;
+.caption {
+  text-align: center;
   padding: 1rem;
-  bottom: 0;
-  right: 0;
-  font-size: 0.8rem;
-  border-radius: 1rem 0 0;
-  @media (max-width: 768px) {
-    left: 0;
-    border-radius: 0;
-    text-align: center;
-  }
+  color: gray;
 }
 
 .divider-img-wrapper {
@@ -63,10 +52,24 @@ iframe {
   box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.4);
 
   .attribution {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: @white;
+    text-align: right;
+    padding: 1rem;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8rem;
+    border-radius: 1rem 0 0;
+    @media (max-width: 768px) {
+      left: 0;
+      border-radius: 0;
+      text-align: center;
+    }
+
     &::before {
       content: '📷 ';
     }
-    .attribution-core
   }
 }
 
