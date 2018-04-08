@@ -55,7 +55,7 @@ view model =
     div [ class "wrapper" ]
         [ header [ id "header" ]
             [ div [ id "logo" ] []
-            , h1 [ class "date" ] [ text "5. - 7. juli"]
+            , h2 [ class "date" ] [ text "5. - 8. juli"]
             ]
         , div [ class "main" ]
             [ div [ id "countdown" , attribute "data-date" "2018-07-05 12:00:00" ] []
