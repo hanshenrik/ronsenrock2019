@@ -54,9 +54,8 @@ view : Model -> Html Msg
 view model =
     div [ class "wrapper" ]
         [ header [ id "header" ]
-            [ canvas [ id "canvas" ] []
-            , div [ id "logo" ] []
-            , div [ class "attribution-core" ] [ text "Psst! Dra langs kanten for å tegne. Trykk for å fjerne de fine, grønne greiene" ]
+            [ div [ id "logo" ] []
+            , h1 [ class "date" ] [ text "5. - 7. juli"]
             ]
         , div [ class "main" ]
             [ div [ id "countdown" , attribute "data-date" "2018-07-05 12:00:00" ] []
