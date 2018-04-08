@@ -152,7 +152,7 @@ view model =
             , div [ class "divider-img-wrapper", style [( "background-image", "url('/images/sofa.jpg')" )] ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen"] ]
             ]
-        , footer [] [ text "✌️" ]
+        , footer [] [ text "Snekret med ✌️av ", a [ href "https://github.com/hanshenrik", target "_blank" ] [ text "hanshenrik" ] ]
         ]
 
 
