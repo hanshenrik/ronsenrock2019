@@ -94,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   height: 100%;
   max-width: 100%;
+  -js-display: flex; // Try fixing IE
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -101,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main {
+  -js-display: flex; // Try fixing IE
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,6 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .directions {
     max-width: 80%;
+    -js-display: flex; // Try fixing IE
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +170,7 @@ header {
   width: 100%;
   position: relative;
 
+  -js-display: flex; // Try fixing IE
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,4 +211,6 @@ footer {
   margin-top: 2rem;
   margin-bottom: -2rem;
   width: 100%;
+  min-width: 100%; // Try fixing IE
+  max-width: 100%; // Try fixing IE
 }
