@@ -26,6 +26,7 @@ function DrawWorm() {
 
   this.initialize = function () {
     canvas = document.getElementById("canvas");
+    header = document.getElementById("header");
     context = canvas.getContext('2d');
 
     width = window.innerWidth;
@@ -36,7 +37,7 @@ function DrawWorm() {
 
     canvas.addEventListener('touchmove', TouchMove, false);
     canvas.addEventListener('mousemove', MouseMove, false);
-    canvas.addEventListener('click', MouseDown, false);
+    header.addEventListener('click', MouseDown, false);
 
     //Set interval - Bad! - I know!
     var interval = setInterval(Draw, 20);

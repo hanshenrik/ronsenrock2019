@@ -53,7 +53,7 @@ embeddedSlippyMap =
 view : Model -> Html Msg
 view model =
     div [ class "wrapper" ]
-        [ header []
+        [ header [ id "header" ]
             [ canvas [ id "canvas" ] []
             , div [ id "logo" ] []
             ]
