@@ -56,6 +56,7 @@ view model =
         [ header [ id "header" ]
             [ canvas [ id "canvas" ] []
             , div [ id "logo" ] []
+            , div [ class "attribution-core" ] [ text "Psst! Dra langs kanten for å tegne. Trykk for å fjerne de fine, grønne greiene" ]
             ]
         , div [ class "main" ]
             [ div [ id "countdown" , attribute "data-date" "2018-06-05 12:00:00" ] []
