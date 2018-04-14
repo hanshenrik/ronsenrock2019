@@ -2,6 +2,11 @@
 @white: #fbfbfb;
 @lightgreen: #95eb95;
 @darkgreen: #3aa53a;
+@quick: .2s;
+@slow: .6s;
+
+.transition { transition: all @quick ease-in-out; }
+.box-shadow { box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.6); }
 
 body {
   margin: 0;
@@ -12,9 +17,11 @@ body {
   font-weight: 300;
 }
 
-img {
-  max-width: 100%;
-}
+img { max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Rammetto One'; }
+
+h1, h2, h3 { border-bottom: 4px solid @lightgreen; }
 
 hr {
   border: 0;
@@ -22,9 +29,7 @@ hr {
   width: 80%;
 }
 
-iframe {
-  border: 0;
-}
+iframe { border: none; }
 
 #spotify-plugin {
   min-height: 380px;
@@ -49,7 +54,7 @@ iframe {
   background-position: center;
   background-size: cover;
   position: relative;
-  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.4);
+  .box-shadow;
 
   .attribution {
     position: absolute;
@@ -61,11 +66,6 @@ iframe {
     right: 0;
     font-size: 0.8rem;
     border-radius: 1rem 0 0;
-    @media (max-width: 768px) {
-      left: 0;
-      border-radius: 0;
-      text-align: center;
-    }
 
     &::before {
       content: '📷 ';
@@ -80,15 +80,11 @@ iframe {
 }
 
 a, a:focus, a:active, a:visited {
-  transition: all 0.2s ease-in-out;
+  .transition;
   color: @darkgreen;
   &:hover {
     color: lighten(@darkgreen, 20%);
   }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rammetto One';
 }
 
 .wrapper {
@@ -137,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
       @media (max-width: 768px) {
         width: 80%;
       }
+
       border: none;
     }
   }
@@ -174,7 +171,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.8);
+  .box-shadow;
 
   margin-bottom: 1rem;
 
