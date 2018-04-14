@@ -5,8 +5,8 @@
 @quick: .2s;
 @slow: .6s;
 
-.transition { transition: all @quick ease-in-out; }
-.box-shadow { box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.6); }
+.transition(@speed: @quick) { transition: all @speed ease-in-out; }
+.box-shadow(@blur: 25px) { box-shadow: 0 2px @blur 0 rgba(0, 0, 0, 0.6); }
 
 body {
   margin: 0;
@@ -177,7 +177,7 @@ iframe { border: none; }
 
     color: @white;
     text-shadow: @black 1px 1px 10px;
-    // .box-shadow;
+    .box-shadow(10px);
 
     background-size: cover;
     background-position: center;
