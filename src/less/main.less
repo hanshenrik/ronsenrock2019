@@ -29,6 +29,13 @@ hr {
   width: 80%;
 }
 
+a, a:focus, a:active, a:visited {
+  .transition;
+  color: @darkgreen;
+
+  &:hover { color: lighten(@darkgreen, 20%); }
+}
+
 iframe { border: none; }
 
 #spotify-plugin {
@@ -51,9 +58,11 @@ iframe { border: none; }
   }
   height: 40vh;
   margin: 0 auto;
+
   background-position: center;
   background-size: cover;
   position: relative;
+
   .box-shadow;
 
   .attribution {
@@ -67,9 +76,7 @@ iframe { border: none; }
     font-size: 0.8rem;
     border-radius: 1rem 0 0;
 
-    &::before {
-      content: '📷 ';
-    }
+    &::before { content: '📷 '; }
   }
 }
 
@@ -77,14 +84,6 @@ iframe { border: none; }
   .divider-img-wrapper;
   width: 100%;
   height: 90vh;
-}
-
-a, a:focus, a:active, a:visited {
-  .transition;
-  color: @darkgreen;
-  &:hover {
-    color: lighten(@darkgreen, 20%);
-  }
 }
 
 .wrapper {
@@ -121,9 +120,7 @@ a, a:focus, a:active, a:visited {
       flex-direction: column;
     }
 
-    > div {
-      padding: 0 1rem;
-    }
+    > div { padding: 0 1rem; }
 
     > #map, iframe {
       height: 500px;
@@ -149,9 +146,7 @@ a, a:focus, a:active, a:visited {
     padding: 0.5rem;
     font-size: 1.5rem;
 
-    &.time {
-      font-size: 2rem;
-    }
+    &.time { font-size: 2rem; }
   }
 }
 
@@ -187,16 +182,11 @@ a, a:focus, a:active, a:visited {
 
     cursor: pointer;
 
-    h3 {
-      display: inline-block;
-    }
-
+    h3 { display: inline-block; }
 
     @media (min-width: 768px) {
       &:hover {
-        .show-more-button {
-          transform: translateY(2px);
-        }
+        .show-more-button { transform: translateY(2px); }
       }
     }
 
@@ -216,12 +206,8 @@ a, a:focus, a:active, a:visited {
 
       .transition;
 
-      &:not(.open)::after {
-        content: '👇'
-      }
-      &.open::after {
-        content: '☝️'
-      }
+      &:not(.open)::after { content: '👇' }
+      &.open::after { content: '☝️' }
     }
   }
 
@@ -273,9 +259,7 @@ header {
   }
 }
 
-footer {
-  padding: 1rem;
-}
+footer { padding: 1rem; }
 
 #countdown {
   margin-top: 2rem;
