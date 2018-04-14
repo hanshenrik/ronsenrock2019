@@ -214,7 +214,7 @@ view model =
             , div [ class "divider-img-wrapper-full", style [( "background-image", "url('/images/sofa-tk.jpg')" )] ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen"] ]
             ]
-        , footer [] [ text "🔨av ", a [ href "https://github.com/hanshenrik", target "_blank" ] [ text "hanshenrik" ] ]
+        , footer [] [ text "🔨 av ", a [ href "https://github.com/hanshenrik", target "_blank" ] [ text "hanshenrik" ] ]
         ]
 
 
