@@ -49,4 +49,9 @@ app.ports.initializeJS.subscribe(function () {
     position: position,
     map: gmap,
   });
+
+  $('.artist').click(function() {
+    $(this).nextAll('.artist-bio').first().slideToggle('fast');
+    $(this).find('.show-more-button').first().toggleClass('open');
+  })
 });

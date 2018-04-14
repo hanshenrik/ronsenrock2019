@@ -144,7 +144,7 @@ a, a:focus, a:active, a:visited {
   margin: 2rem 0;
 }
 
-.program, .artists {
+.program {
   td {
     padding: 0.5rem;
     font-size: 1.5rem;
@@ -153,9 +153,82 @@ a, a:focus, a:active, a:visited {
       font-size: 2rem;
     }
   }
+}
 
-  h3 {
-    border-bottom: 4px solid @lightgreen;
+.artists {
+  min-width: 60%;
+  @media (max-width: 768px) {
+    min-width: 80%;
+  }
+}
+
+.artists-list {
+  width: 100%;
+  display: flex;
+  -js-display: flex; // Try fixing IE
+  flex-direction: column;
+  justify-content: center;
+
+  .artist {
+    position: relative;
+
+    padding: 0 1rem 1rem 1rem;
+    margin: 0.5rem auto;
+    width: 80%;
+    height: 30vh;
+
+    color: @white;
+    text-shadow: @black 1px 1px 10px;
+    // .box-shadow;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    h3 {
+      display: inline-block;
+    }
+
+
+    @media (min-width: 768px) {
+      &:hover {
+        .show-more-button {
+          transform: translateY(2px);
+        }
+      }
+    }
+
+    .show-more-button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.5rem;
+
+      text-align: center;
+      font-size: 1.5rem;
+      color: @white;
+      text-shadow: @black 3px 3px 4px;
+
+      cursor: pointer;
+
+      .transition;
+
+      &:not(.open)::after {
+        content: '👇'
+      }
+      &.open::after {
+        content: '☝️'
+      }
+    }
+  }
+
+
+  .artist-bio {
+    padding: 0 1rem;
+    display: none;
   }
 }
 
