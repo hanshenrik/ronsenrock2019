@@ -8,9 +8,9 @@
 .transition(@speed: @quick) { transition: all @speed ease-in-out; }
 .box-shadow(@blur: 25px) { box-shadow: 0 2px @blur 0 rgba(0, 0, 0, 0.6); }
 
+html, body { margin: 0; padding: 0; }
+
 body {
-  margin: 0;
-  padding: 0;
   background-color: @white;
   color: @black;
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
@@ -39,10 +39,10 @@ a, a:focus, a:active, a:visited {
 iframe { border: none; }
 
 #spotify-plugin {
-  min-height: 380px;
-  height: 40vh;
+  height: 380px;
   min-width: 300px;
   width: 30%;
+  align-self: center;
 }
 
 .caption {
@@ -56,7 +56,7 @@ iframe { border: none; }
   @media (max-width: 768px) {
     width: 100%;
   }
-  height: 40vh;
+  height: 400px;
   margin: 0 auto;
 
   background-position: center;
@@ -83,7 +83,10 @@ iframe { border: none; }
 .divider-img-wrapper-full {
   .divider-img-wrapper;
   width: 100%;
-  height: 90vh;
+  height: 700px;
+  @media (max-width: 768px) {
+    height: 500px;
+  }
 }
 
 .wrapper {
@@ -123,11 +126,11 @@ iframe { border: none; }
     > div { padding: 0 1rem; }
 
     > #map, iframe {
-      height: 500px;
-      max-height: 50vh;
-      width: 500px;
       min-width: 40%;
+      width: 500px;
+      height: 500px;
       @media (max-width: 768px) {
+        height: 300px;
         width: 80%;
       }
 
@@ -155,6 +158,10 @@ iframe { border: none; }
   @media (max-width: 768px) {
     min-width: 80%;
   }
+
+  display: flex;
+  -js-display: flex; // Try fixing IE
+  flex-direction: column;
 }
 
 .artists-list {
@@ -170,9 +177,9 @@ iframe { border: none; }
     padding: 0 1rem 1rem 1rem;
     margin: 0.5rem auto;
     width: 80%;
-    height: 30vh;
+    height: 250px;
     @media (min-width: 768px) {
-      height: 35vh;
+      height: 300px;
     }
 
     color: @white;
@@ -223,9 +230,6 @@ iframe { border: none; }
 
 header {
   height: 100vh;
-  @media (max-width: 768px) {
-    height: 90vh;
-  }
   width: 100%;
   position: relative;
 
