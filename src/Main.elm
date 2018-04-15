@@ -60,10 +60,10 @@ view model =
             , p []
                 [ text "For eksempel en av disse:"
                 , ul []
-                    [ li [] [ a [ href "https://www.google.com/chrome" ] [ text "Chrome" ] ]
-                    , li [] [ a [ href "https://www.mozilla.org/en-US/firefox/new/" ] [ text "Firefox" ] ]
+                    [ li [] [ a [ href "https://www.google.com/chrome" ] [ text "Google Chrome" ] ]
+                    , li [] [ a [ href "https://www.mozilla.org/en-US/firefox/new/" ] [ text "Mozilla Firefox" ] ]
                     , li [] [ a [ href "https://www.opera.com/" ] [ text "Opera" ] ]
-                    , li [] [ a [ href "https://www.microsoft.com/en-us/windows/microsoft-edge" ] [ text "Edge" ] ]
+                    , li [] [ a [ href "https://www.microsoft.com/en-us/windows/microsoft-edge" ] [ text "Microsoft Edge" ] ]
                     ]
                 ]
             ]
