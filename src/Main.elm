@@ -54,9 +54,9 @@ view : Model -> Html Msg
 view model =
     div [ class "wrapper" ]
         [ div [ class "ie ie-notice" ]
-            [ p [] [ text "Psst! Ser at du bruker ", strong [] [ text "Internet Explorer" ], text " 😬" ]
-            , p [] [ text "Den nettleseren er skikkelig lei å ha med å gjøre 😞" ]
-            , p [] [ text "Så hvis du vil se hvordan sida ", em [] [ text "egentlig" ], text " skal se ut - sjekk den gjerne ut i en annen nettleser 🙂" ]
+            [ p [] [ text "Psst! Ser at du bruker ", strong [] [ text "Internet Explorer" ], text " :|" ]
+            , p [] [ text "Den nettleseren er skikkelig lei å ha med å gjøre :(" ]
+            , p [] [ text "Så hvis du vil se hvordan sida ", em [] [ text "egentlig" ], text " skal se ut - sjekk den gjerne ut i en annen nettleser :)" ]
             , p []
                 [ text "For eksempel en av disse:"
                 , ul []
