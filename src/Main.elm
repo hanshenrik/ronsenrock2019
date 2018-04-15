@@ -73,7 +73,7 @@ view model =
                             , td [] [ text "Tautrekking" ]
                             ]
                         , tr []
-                            [ td [ class "time" ] [ text "18:00" ]
+                            [ td [ class "time" ] [ text "19:00" ]
                             , td [] [ text "Konsertrekke #1" ]
                             ]
                         , tr [] [ td [ colspan 2 ] [ h3 [] [ text "Lørdag 7. juli" ] ] ]
