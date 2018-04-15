@@ -50,8 +50,13 @@ app.ports.initializeJS.subscribe(function () {
     map: gmap,
   });
 
+  // Open/close artist bio when clicking artist image
   $('.artist').click(function() {
     $(this).nextAll('.artist-bio').first().slideToggle('fast');
     $(this).find('.show-more-button').first().toggleClass('open');
   })
+
+  // Set the header height based on the initial window height to avoid URL address bar show/hide
+  // change the height of the header, making the whole page jump annoyingly
+  $('#header').css('height', $(window).height());
 });
