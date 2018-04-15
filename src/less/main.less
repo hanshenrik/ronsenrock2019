@@ -168,15 +168,15 @@ iframe { border: none; }
     min-width: 80%;
   }
 
-  display: flex;
   -js-display: flex; // Try fixing IE
+  display: flex;
   flex-direction: column;
 }
 
 .artists-list {
   width: 100%;
-  display: flex;
   -js-display: flex; // Try fixing IE
+  display: flex;
   flex-direction: column;
   justify-content: center;
 
@@ -285,6 +285,9 @@ footer { padding: 1rem; }
 }
 
 .ie { display: none; }
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .ie { display: block; }
+}
 .ie-notice {
   position: absolute;
   z-index: 10;
