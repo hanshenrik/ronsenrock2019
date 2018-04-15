@@ -43,6 +43,8 @@ a, a:focus, a:active, a:visited {
   &:hover { color: lighten(@darkgreen, 20%); }
 }
 
+ul { list-style-type: square; }
+
 iframe { border: none; }
 
 #spotify-plugin {
@@ -280,4 +282,15 @@ footer { padding: 1rem; }
   margin-top: 2rem;
   margin-bottom: -2rem;
   width: 100%;
+}
+
+.ie { display: none; }
+.ie-notice {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(149, 235, 149, 0.95);
 }

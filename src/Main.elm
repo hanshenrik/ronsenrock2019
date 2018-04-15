@@ -53,7 +53,21 @@ embeddedSlippyMap =
 view : Model -> Html Msg
 view model =
     div [ class "wrapper" ]
-        [ header [ id "header" ]
+        [ div [ class "ie ie-notice" ]
+            [ p [] [ text "Psst! Ser at du bruker ", strong [] [ text "Internet Explorer" ], text " 😬" ]
+            , p [] [ text "Den nettleseren er skikkelig lei å ha med å gjøre 😞" ]
+            , p [] [ text "Så hvis du vil se hvordan sida ", em [] [ text "egentlig" ], text " skal se ut - sjekk den gjerne ut i en annen nettleser 🙂" ]
+            , p []
+                [ text "For eksempel en av disse:"
+                , ul []
+                    [ li [] [ a [ href "https://www.google.com/chrome" ] [ text "Chrome" ] ]
+                    , li [] [ a [ href "https://www.mozilla.org/en-US/firefox/new/" ] [ text "Firefox" ] ]
+                    , li [] [ a [ href "https://www.opera.com/" ] [ text "Opera" ] ]
+                    , li [] [ a [ href "https://www.microsoft.com/en-us/windows/microsoft-edge" ] [ text "Edge" ] ]
+                    ]
+                ]
+            ]
+        , header [ id "header" ]
             [ div [ id "logo" ] []
             , h2 [ class "date" ] [ text "5. - 8. juli"]
             ]
