@@ -148,7 +148,7 @@ view model =
                         [ p [] [ h5 [ class "inline" ] [ text "Bucktooth Dan" ], text " er en gitarist og sanger tidligere og fortsatt kjent for å være det samme i punkbandet Inglorious Retards." ]
                         , p [] [ text "Dette er liksom bare sologreia." ]
                         ]
-                    , p [ style [("text-align", "center")] ] [ text "Flere kommer...!" ]
+                    , p [ style [("text-align", "center")] ] [ text "Flere artister kommer snart...!" ]
                     ]
                 -- , iframe [ id "spotify-plugin", src "https://open.spotify.com/embed/user/shenrik/playlist/3WNyCI7Eok5aS12zoAxHXF", seamless True ] []
                 ]
