@@ -169,7 +169,7 @@ view model =
                     , div [ class "artist-bio" ]
                         [ p [] [ h5 [ class "inline" ] [ text "Konger og Keisere" ], text " er en trio ifra Drammen som spiller ektefølt beinhard ny norsk rock, godt variert innenfor sjangeren. Gutta har nå konspirert sammen i nærmere 4 år og har etter hvert utviklet et bredt utvalg av låter som sitter som dritt i kram snø. Elementer som funk, blues og prog ispedd tunge riff og fengende linjer blir servert i en utrolig kul kombinasjon av forskjellige stilarter som inviterer til ekstremt høy ølglassføring." ]
                         , p [] [ text "Når Konger og Keisere da i tillegg leverer show på show preget av skyhøy energi og genuin spilleglede hersker det ingen tvil om at der de er, der må du være!" ]
-                        , p [] [ text "Sjekk de ut på ", a [ href "http://spoti.fi/2FUCulT", target "_blank" ] [ text "Spotify" ], text " og ", a [ href " http://bit.ly/2FWfVxn", target "_blank" ] [ text "Facebook" ], text "." ]
+                        , p [] [ text "Sjekk de ut på ", a [ href "http://spoti.fi/2FUCulT", target "_blank" ] [ text "Spotify" ], text " og ", a [ href "http://bit.ly/2FWfVxn", target "_blank" ] [ text "Facebook" ], text "." ]
                         ]
                     , div [ class "artist", style [( "background-image", "url('/images/artists/darlig-hjort.jpg')" )] ]
                         [ h3 [] [ text "Dårlig Hjort" ]
