@@ -119,7 +119,7 @@ view model =
             , div [ class "section artists" ]
                 [ h1 [] [ text "Hvem spiller?"]
                 , img [ src "images/program.jpg" ] []
-                , div [ class "caption" ] [ text "Alle konserter varer omtrent 1 time, bortsett fra konsertene på dagtid på lørdag - de varer rundt en halv en." ]
+                , div [ class "caption" ] [ text "Alle konserter varer omtrent 1 time, bortsett fra konsertene på dagtid på lørdag som varer rundt en halv en." ]
                 ]
             , div [ class "divider-img-wrapper-full", style [( "background-image", "url('/images/jokk-tk.jpg')" )] ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen"] ]
