@@ -216,7 +216,7 @@ view model =
                         , div [ class "show-more-button" ] []
                         ]
                     , div [ class "artist-bio" ]
-                        [ p [] [ h5 [ class "inline" ] [ text "Helt Greit Band" ], text " er et ukulele basert popband med røtter fra Eidsvoll og Hurdal. Dette gjenspeiles i deres enkle og fengende tekster om eggeskje, fiskepinner og øl. Gruppa består av fire folk med varierte musikkerfaringer fra jazz til rock og rull. Det går rykter om at bandet har en fanskare som kan noen av tekstene bedre enn bandmedlemmene selv. Gled deg til å høre egenproduserte ukulelepoplåter og noen fete coverlåter du aldri har hørt maken til." ]
+                        [ p [] [ h5 [ class "inline" ] [ text "Helt Greit Band" ], text " er et ukulelebasert popband med røtter fra Eidsvoll og Hurdal. Dette gjenspeiles i deres enkle og fengende tekster om eggeskjeer, fiskepinner og øl. Gruppa består av fire folk med varierte musikkerfaringer fra jazz til rock og rull. Det går rykter om at bandet har en fanskare som kan noen av tekstene bedre enn bandmedlemmene selv. Gled deg til å høre egenproduserte ukulelepoplåter og noen fete coverlåter du aldri har hørt maken til." ]
                         ]
                     , div [ class "artist", style [( "background-image", "url('/images/artists/marius-abrahamsen.jpg')" ), ( "background-position-y", "bottom" )] ]
                         [ h3 [] [ text "Marius Abrahamsen" ]
