@@ -120,7 +120,7 @@ view model =
                 [ h1 [] [ text "Hvem spiller?"]
                 , img [ src "images/program.jpg" ] []
                 , div [ class "caption" ] [ text "Alle konserter varer omtrent 1 time, bortsett fra konsertene på dagtid på lørdag som varer rundt en halv en." ]
-                -- , iframe [ id "spotify-plugin", src "https://open.spotify.com/embed/user/shenrik/playlist/3WNyCI7Eok5aS12zoAxHXF", seamless True ] []
+                , iframe [ id "spotify-plugin", src "https://open.spotify.com/embed/user/1113006308/playlist/6FfNqW0AcFkrhlUaDfqfpD?si=S36Q1tleRB6w5MYvFWtS2g", seamless True ] []
                 ]
             , div [ class "divider-img-wrapper-full", style [( "background-image", "url('/images/jokk-tk.jpg')" )] ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen"] ]
