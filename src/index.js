@@ -37,17 +37,27 @@ app.ports.initializeJS.subscribe(function () {
     }
   });
 
-  // Initialize Google Map
-  const mapDiv = document.getElementById('map');
-  const position = new google.maps.LatLng(60.368553, 11.256755);
-  const mapOptions = {
-    zoom: 10,
-    center: position,
-  };
-  const gmap = new google.maps.Map(mapDiv, mapOptions);
-  const marker = new google.maps.Marker({
-    position: position,
-    map: gmap,
+  // Initialize Mapbox
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFuc2hlbnJpayIsImEiOiJjamV3NW1lamYwanllMndwNW11azRoa2ZmIn0.yiRRHbdHlHYxMlgRO-HnHw';
+  var center = [11.256755, 60.368553];
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v10?optimize=true',
+    center: center,
+    zoom: 10
+  });
+
+  var directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+    unit: 'metric'
+  });
+
+  map.addControl(directions, 'top-left');
+  map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+  map.addControl(new mapboxgl.FullscreenControl(), 'top-left');
+
+  map.on('load', () => {
+    directions.setDestination('Rønsenvegen 121, 2080 Eidsvoll');
   });
 
   // Open/close artist bio when clicking artist image

@@ -135,15 +135,18 @@ iframe { border: none; }
     > div { padding: 0 1rem; }
 
     > #map, iframe {
-      min-width: 40%;
-      width: 500px;
-      height: 500px;
-      @media (max-width: 768px) {
-        height: 300px;
-        width: 80%;
-      }
-
       border: none;
+      padding: 0;
+
+      min-width: 500px;
+      min-height: 500px;
+      width: 100%;
+      height: 100%;
+      @media (max-width: 768px) {
+        min-height: 300px;
+        min-width: 100%;
+        height: 300px;
+      }
     }
   }
 }

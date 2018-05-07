@@ -2,8 +2,6 @@ port module Main exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Mapbox.Maps.SlippyMap as Mapbox
-import Mapbox.Endpoint as Endpoint
 
 
 ---- MODEL ----
@@ -34,21 +32,6 @@ update msg model =
 
 ---- VIEW ----
 
-
-mapboxToken : String
-mapboxToken =
-    "pk.eyJ1IjoiaGFuc2hlbnJpayIsImEiOiJjamV3NW1lamYwanllMndwNW11azRoa2ZmIn0.yiRRHbdHlHYxMlgRO-HnHw"
-
-mapboxPosition : Maybe Mapbox.Position
-mapboxPosition = Just (Mapbox.Position 0 0 0)
-
-mapboxOptions : Maybe Mapbox.Options
-mapboxOptions = Just (Mapbox.Options False True True True)
-
--- Embed a slippy map into your website and set Options, Hash and Size of the iframe.
-embeddedSlippyMap : Html msg
-embeddedSlippyMap =
-    Mapbox.slippyMap Endpoint.dark mapboxToken mapboxOptions mapboxPosition (Mapbox.Size 500 500)
 
 view : Model -> Html Msg
 view model =
@@ -299,8 +282,7 @@ view model =
             , div [ class "divider-img-wrapper-full", style [( "background-image", "url('/images/maria-skilt-ss.jpg')" )] ]
                 [ div [ class "attribution" ] [ text "Siri Saugstad"] ]
             , div [ class "section directions" ]
-                [ div [ id "map" ] []
-                , div []
+                [ div []
                     [ h1 [] [ text "Hvor er det?" ]
                     , p [] [ text "Rønsenvegen 121, 2080 Eidsvoll" ]
                     , h4 [] [ text "Med bil" ]
@@ -319,6 +301,7 @@ view model =
                         , text "."
                         ]
                     ]
+                , div [ id "map" ] []
                 ]
             , div [ class "divider-img-wrapper-full", style [( "background-image", "url('/images/tautrekking2-tk.jpg')" )] ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen"] ]
