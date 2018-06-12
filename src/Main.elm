@@ -356,11 +356,15 @@ view model =
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
             ]
         , footer []
-            [ ul []
-                [ li [] [ text "👋 ", a [ href "mailto:post@rønsenrock.no", target "_blank" ] [ text "post@rønsenrock.no" ] ]
-                , li [] [ text "🤝 ", a [ href "mailto:booking@rønsenrock.no", target "_blank" ] [ text "booking@rønsenrock.no" ] ]
-                , li [] [ text "🔨 av ", a [ href "https://github.com/hanshenrik", target "_blank" ] [ text "hanshenrik" ] ]
+            [ div []
+                [ text "✉️ "
+                , a [ href "mailto:post@rønsenrock.no", target "_blank" ]
+                    [ text "post@rønsenrock.no" ]
+                , text " | "
+                , a [ href "mailto:booking@rønsenrock.no", target "_blank" ]
+                    [ text "booking@rønsenrock.no" ]
                 ]
+            , div [] [ text "🔨 av ", a [ href "https://github.com/hanshenrik", target "_blank" ] [ text "hanshenrik" ] ]
             ]
         ]
 
