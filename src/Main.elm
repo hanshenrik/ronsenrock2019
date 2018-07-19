@@ -52,6 +52,7 @@ view model =
             ]
         , header [ id "header" ]
             [ div [ id "logo" ] [] ]
+        , a [ id "facebook-icon", href "https://www.facebook.com/RockogRull", target "_blank" ] [ i [ class "fab fa-facebook" ] [] ]
         , div [ class "main" ]
             [ div [ class "section" ]
                 [ p [] [ text "RønsenROCK er over for i år. Vi sees neste år!" ] ]
