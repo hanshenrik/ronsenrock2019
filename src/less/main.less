@@ -2,6 +2,7 @@
 @white: #fbfbfb;
 @lightgreen: #95eb95;
 @darkgreen: #3aa53a;
+@facebookBlue: #5979bd;
 @quick: 0.2s;
 @slow: 0.6s;
 
@@ -92,6 +93,10 @@ iframe {
   }
   z-index: 10;
   text-shadow: @black 1px 1px 3px;
+  color: @facebookBlue;
+  &:hover {
+    color: lighten(@facebookBlue, 20%);
+  }
 }
 
 .caption {
