@@ -172,7 +172,7 @@ iframe {
   align-items: center;
   justify-content: center;
 
-  > *:not(.divider-img-wrapper-full) {
+  > *:not(.divider-img-wrapper-full):not(.countdown-wrapper-full) {
     max-width: 50%;
     @media (max-width: 768px) {
       max-width: 80%;
@@ -356,10 +356,20 @@ footer {
   text-align: center;
 }
 
-#countdown {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.countdown-wrapper-full {
+  background: black;
+  color: white;
+  padding-bottom: 3rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#countdown {
+  width: 70%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 
 .ie {
