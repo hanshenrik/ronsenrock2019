@@ -423,7 +423,7 @@ view model =
                 , h4 [] [ text "Blir det fett?" ]
                 , p [] [ text "Ja." ]
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/chill-2018.jpg')" ) ] ] []
+            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/chill-2018.jpg')" ), ( "background-position", "right" ) ] ] []
             ]
         , footer []
             [ div []
