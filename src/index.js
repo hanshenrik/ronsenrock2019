@@ -4,7 +4,7 @@ import registerServiceWorker from "./registerServiceWorker";
 
 var app = Main.embed(document.getElementById("root"));
 
-registerServiceWorker();
+// registerServiceWorker();
 
 // Initilize JS stuff when Elm is ready
 app.ports.initializeJS.subscribe(function() {
