@@ -391,7 +391,7 @@ view model =
                     , p [] [ text "Når du har gått av på Eidsvoll stasjon (ikke Eidsvoll Verk!), er det fremdeles rundt 7 kilometer til du er framme. Kollektivtilbudet herfra er heller skralt, så her er alternativene taxi, venner med bil, sykkel eller å ta beina fatt." ]
                     , p []
                         [ text "Det er mange som kjører forbi stasjonen på vei til festivalen, så det er sikkert mulig å organisere samkjøring på "
-                        , a [ href "https://facebook.com/events/1645171895567999", target "_blank" ] [ text "Facebook-eventet" ]
+                        , a [ href "https://www.facebook.com/events/674234829615809", target "_blank" ] [ text "Facebook-eventet" ]
                         , text "."
                         ]
                     ]
