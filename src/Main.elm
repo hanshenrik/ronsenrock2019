@@ -418,7 +418,7 @@ view model =
                 , ul []
                     [ li [] [ text "Det er dessverre ikke lov til å ha med hund på festivalen." ]
                     , li [] [ text "Det er ikke tillatt å fyre bål i campen. Men ingen grunn til å fortvile - det er grillmuligheter på festivalområdet!" ]
-                    , li [] [ text "Det er ikke lov å ha med eget annlegg i campen." ]
+                    , li [] [ text "Det er ikke lov å ha med eget anlegg i campen." ]
                     ]
                 , h4 [] [ text "Blir det fett?" ]
                 , p [] [ text "Ja." ]
