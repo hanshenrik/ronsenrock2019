@@ -84,7 +84,8 @@ iframe {
 #spotify-plugin {
   height: 380px;
   min-width: 300px;
-  width: 30%;
+  max-width: 95%;
+  width: 50%;
   align-self: center;
 }
 
@@ -220,10 +221,21 @@ iframe {
   display: grid;
   grid-template-columns: minmax(50vw, 1fr);
 
+  h1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
   .event {
     position: relative;
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
 
     &.time {
       font-size: 2rem;
