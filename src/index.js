@@ -63,6 +63,7 @@ app.ports.initializeJS.subscribe(function() {
 
   // Open/close artist bio when clicking artist image
   $(".artist").click(function() {
+    $(this).toggleClass("open");
     $(this)
       .nextAll(".artist-bio")
       .first()

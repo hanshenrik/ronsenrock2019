@@ -252,6 +252,7 @@ iframe {
 
   .artist {
     position: relative;
+    .transition;
 
     padding: 0 1rem 1rem 1rem;
     margin: 0.5rem auto;
@@ -270,6 +271,14 @@ iframe {
     background-repeat: no-repeat;
 
     cursor: pointer;
+
+    filter: sepia(0.75);
+    &.open {
+      filter: none;
+      @media (min-width: 768px) {
+        height: 400px;
+      }
+    }
 
     h3 {
       display: inline-block;
