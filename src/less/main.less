@@ -217,12 +217,17 @@ iframe {
 }
 
 .program {
-  td {
+  display: grid;
+  grid-template-columns: minmax(50vw, 1fr);
+
+  .event {
+    position: relative;
     padding: 0.5rem;
     font-size: 1.5rem;
 
     &.time {
       font-size: 2rem;
+      width: 1%;
     }
   }
 }
@@ -269,43 +274,77 @@ iframe {
     h3 {
       display: inline-block;
     }
-
-    @media (min-width: 768px) {
-      &:hover {
-        .show-more-button {
-          transform: translateY(3px);
-        }
-      }
-    }
-
-    .show-more-button {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 0.5rem;
-
-      text-align: center;
-      font-size: 1.5rem;
-      color: @white;
-      text-shadow: @black 1px 2px 0px;
-
-      cursor: pointer;
-
-      .transition;
-
-      &:not(.open)::after {
-        content: "👇";
-      }
-      &.open::after {
-        content: "☝️";
-      }
-    }
   }
 
   .artist-bio {
-    padding: 0 1rem;
+    width: 80%;
+    margin: auto;
     display: none;
+  }
+
+  .show-more-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .artist:hover,
+  .event:hover {
+    .show-more-button {
+      transform: translateY(3px);
+    }
+  }
+}
+
+.event {
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 3fr 8fr 1fr;
+  max-width: 100%;
+
+  .show-more-button {
+    text-align: right;
+  }
+}
+
+.event-info {
+  padding: 0 1rem;
+  display: none;
+  font-size: 1rem;
+
+  table {
+    margin: auto;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    td {
+      padding: 0.25rem;
+    }
+  }
+}
+
+.show-more-button {
+  text-align: center;
+  font-size: 1.5rem;
+  color: @white;
+  text-shadow: @black 1px 2px 0px;
+
+  cursor: pointer;
+
+  .transition;
+
+  &:not(.open)::after {
+    content: "👇";
+  }
+  &.open::after {
+    content: "☝️";
   }
 }
 
