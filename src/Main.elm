@@ -81,7 +81,7 @@ view model =
                         ]
                     , div [ class "event-info" ]
                         [ img [ src "/images/tautrekking3-sbf.jpg" ] []
-                        , p [] [ text "Tautrekking skrev seg inn i olympisk historie på 1900-tallet, selv om det ikke er en gren i OL i dag. Har RønsenROCK tatt på seg jobben med å føre konkurransen videre! Her vanker det heftig premie til vinnerlaget." ]
+                        , p [] [ text "Tautrekking skrev seg inn i olympisk historie på 1900-tallet, og selv om det ikke er en gren i OL i dag har RønsenROCK tatt på seg jobben med å føre konkurransen videre! Her vanker det heftig premie til vinnerlaget." ]
                         ]
                     , div [ class "event" ]
                         [ div [ class "time" ] [ text "19:00" ]
