@@ -782,7 +782,7 @@ view model =
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
             , div [ class "section" ]
                 [ h1 [] [ text "Hva er hvor?" ]
-                , p [] [ text "I år har vi også et kart over festivalområdet. Slå opp her hvis du lurer på hvor du finner scena, dassen, vasken, grillen, potetåkeren og alt annet. Tegnet av Lisa Martinsen." ]
+                , p [] [ text "I år har vi også et kart over festivalområdet. Slå opp her hvis du lurer på hvor du finner scena, dassen, vasken, grillen, potetåkeren og alt annet. Tegnet av Lisa Løtvedt Martinsen." ]
                 ]
             , img [ src "/images/kart-lm.jpg", class "camp-map" ] []
             , div [ class "section" ]
