@@ -309,7 +309,7 @@ view model =
                         , p [] [ text "De har spilt på RønsenROCK hvert eneste år, og det skal det skal de så klart i år også. Det går rykter om at bandet har en fanskare som kan noen av tekstene bedre enn bandmedlemmene selv. Gled dere til å høre egenproduserte ukulelepoplåter og noen fete coverlåter du aldri har hørt maken til." ]
                         ]
                     , div [ class "artist", style [ ( "background-image", "url('/images/artists/helmer.jpg')" ) ] ]
-                        [ h3 [] [ text "XXX" ]
+                        [ h3 [] [ text "Helmer" ]
                         , div [ class "show-more-button" ] []
                         ]
                     , div [ class "artist-bio" ]
