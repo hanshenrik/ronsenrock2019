@@ -394,7 +394,7 @@ view model =
                         , div [ class "show-more-button" ] []
                         ]
                     , div [ class "artist-bio" ]
-                        [ p [] [ h5 [ class "inline" ] [ text "BOLT" ], text " ble dannet tidlig i 2016, og er et heftig og groovy band som spiller hard rockmetal. Bandet består av fem hårete rebeller som ikke vil vokse opp, og de leverer alltid et heftig liveshow til sitt publikum! Gutta er fra de beste kantene av bygdenorge, og liker seg best på hjemmebane." ]
+                        [ p [] [ h5 [ class "inline" ] [ text "BOLT" ], text " ble dannet tidlig i 2016, og er et heftig og groovy band som spiller hard rockmetal. Bandet består av fem rebeller som ikke vil vokse opp, og de leverer alltid et heftig liveshow til sitt publikum! Folka i BOLT er fra de beste kantene av bygdenorge, og liker seg best på hjemmebane." ]
                         , p [] [ text "«We play groovy metal music for women that like men with beard, and for men that like beer»" ]
                         , ul []
                             [ li []
