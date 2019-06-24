@@ -389,7 +389,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/bolt.jpg')" ), ( "background-position", "bottom" ) ] ]
+                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/bolt-2.jpg')" ), ( "background-position", "bottom" ) ] ]
                         [ h3 [] [ text "BOLT" ]
                         , div [ class "show-more-button" ] []
                         ]
