@@ -1,7 +1,9 @@
 port module Main exposing (..)
 
 import Html exposing (..)
+import Browser exposing (..)
 import Html.Attributes exposing (..)
+
 
 
 ---- MODEL ----
@@ -11,8 +13,8 @@ type alias Model =
     {}
 
 
-init : ( Model, Cmd Msg )
-init =
+init : () -> ( Model, Cmd Msg )
+init flags =
     ( {}, initializeJS () )
 
 
@@ -59,7 +61,7 @@ view model =
             [ div [ class "countdown-wrapper-full" ]
                 [ div [ id "countdown", attribute "data-date" "2019-07-11 12:00:00" ] []
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/tak-2018.jpg')" ), ( "background-position", "center" ) ] ] []
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/tak-2018.jpg')", style "background-position" "center" ] []
             , div [ class "section" ]
                 [ div [ class "program" ]
                     [ div [] [ h1 [] [ text "Torsdag 11. juli" ] ]
@@ -208,13 +210,13 @@ view model =
                         ]
                     ]
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/stemning4-tk.jpg')" ) ] ]
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/stemning4-tk.jpg')" ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
             , div [ class "section artists" ]
-                [ iframe [ id "spotify-plugin", src "https://open.spotify.com/embed/user/1113006308/playlist/6FfNqW0AcFkrhlUaDfqfpD?si=S36Q1tleRB6w5MYvFWtS2g", seamless True ] []
+                [ iframe [ id "spotify-plugin", src "https://open.spotify.com/embed/user/1113006308/playlist/6FfNqW0AcFkrhlUaDfqfpD?si=S36Q1tleRB6w5MYvFWtS2g" ] []
                 , h1 [] [ text "Artister" ]
                 , div [ class "artists-list" ]
-                    [ div [ class "artist", style [ ( "background-image", "url('/images/artists/djdamik.png')" ), ( "background-position-y", "top" ) ] ]
+                    [ div [ class "artist", style "background-image" "url('/images/artists/djdamik.png')", style "background-position-y" "top" ]
                         [ h3 [] [ text "DjDaMIK" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -222,7 +224,7 @@ view model =
                         [ p [] [ text "En soft og havlgammel skåning som ikke vil noe anna enn å få folk i godt humør! Han er en jævel på å spille skiver og kommer til å gi festivalplassen en helt egen feeling på selveste åpningsdagen!" ]
                         , p [] [ text "Han gjorde sin entre på RønsenROCK 2018, og vi visste dermed at denna DJ-en måtte få en evig plass på åpningsdagen! Vi gleder oss att høra!" ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/inglorious-retards.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/inglorious-retards.jpg')" ]
                         [ h3 [] [ text "Inglorious Retards" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -236,7 +238,7 @@ view model =
                             , li [] [ a [ href "https://www.youtube.com/watch?v=Xk3YyZQiYfM" ] [ text "YouTube: Æ vil bli som Stan Lee" ] ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/aarb.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/aarb.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "AARB" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -245,7 +247,7 @@ view model =
                         , p [] [ text "Vokalisten presenterer et stemningsbilde: «Fortapt i livets voldelige storm, som en fremmed i et fremmed land, støter du plutselig på en hytte. Inne i denne hytta slås lyset alltid av, og ved en nærmere beføling av veggene oppdager du hullet. Våger du deg inn i dette hullet, vil du bli møtt av en eksplosjon av drivende bass, harde gitarer,  dundrende trommer og en vokal som kan trenge gjennom det meste. Når du våkner dagen etter med en pulserende hangover, er det eneste du vil huske... AARB.»" ]
                         , p [] [ text "AARB er konsekvensen av dine dårlige livsvalg, når du våkner dagen etter og ser dobbelt. Men gøy skal vi ha det med AARB på scenen!" ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/astralplane.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/astralplane.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Astralplane" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -258,7 +260,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/drukkenbolt.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/drukkenbolt.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Drukkenbolt" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -271,7 +273,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/dance-commander.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/dance-commander.jpg')" ]
                         [ h3 [] [ text "Dance Commander" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -287,7 +289,7 @@ view model =
                             , li [] [ a [ href "https://www.youtube.com/watch?v=OeuzYsEEueg", target "_blank" ] [ text "Dance Commander - 10 years in the making" ] ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/domt.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/domt.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Dømt" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -300,7 +302,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/helt-greit-band.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/helt-greit-band.jpg')" ]
                         [ h3 [] [ text "Helt Greit Band" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -308,7 +310,7 @@ view model =
                         [ p [] [ h5 [ class "inline" ] [ text "Helt Greit Band" ], text " er et ukulelebasert popband med røtter fra Eidsvoll og Hurdal. Dette gjenspeiles i deres enkle og fengende tekster om eggeskjeer, fiskepinner og øl. Gruppa består av fire kjekke karer med variert musikkerfaring som strekker seg fra jazzen til rocken, dette er visebygdesang på sitt aller beste. Ikke la navnet lure deg, med fire helt greie guttær som kan greiene sine blir det greier! Humoristiske tekster, flerstemmer, tromme og piano gjør HGB til det beste greie bandet vi har hørt." ]
                         , p [] [ text "De har spilt på RønsenROCK hvert eneste år, og det skal det skal de så klart i år også. Det går rykter om at bandet har en fanskare som kan noen av tekstene bedre enn bandmedlemmene selv. Gled dere til å høre egenproduserte ukulelepoplåter og noen fete coverlåter du aldri har hørt maken til." ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/helmer.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/helmer.jpg')" ]
                         [ h3 [] [ text "Helmer" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -321,7 +323,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/impaired.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/impaired.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Impaired" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -329,7 +331,7 @@ view model =
                         [ p [] [ h5 [ class "inline" ] [ text "Impaired" ], text " er et garageband fra Eidsvoll som spiller variert covermusikk som strekker seg fra rocken og videre inn i det litt mer alternative hjørnet." ]
                         , p [] [ text "Bandet har spilt sammen i litt over ett år og beskriver seg selv som en morsom, livlig og engasjert gjeng som liker musikalske utfordringer." ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/the-loop-brothers.jpg')" ), ( "background-position", "bottom" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/the-loop-brothers.jpg')", style "background-position" "bottom" ]
                         [ h3 [] [ text "The Loop Brothers" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -337,7 +339,7 @@ view model =
                         [ p [] [ h5 [ class "inline" ] [ text "The Loop Brothers" ], text " er en akustisk trio som bruker live looping for å bygge opp lyden gradvis lag på lag, gjennom et sett med kjente og ukjente coverlåter." ]
                         , p [] [ text "Det eksperimenteres med looping for å lage et variert musikalsk lydbilde og god stemning! Loopersa hadde sin debut på RønsenROCK i 2016, og det er en glede å ha de tilbake hos oss i år!" ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/andreas-fagertun.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/andreas-fagertun.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Andreas Fagertun" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -349,7 +351,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/janos.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/janos.jpg')" ]
                         [ h3 [] [ text "Janos" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -363,7 +365,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/levitation-b-band-heksa.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/levitation-b-band-heksa.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Levitation B Band" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -376,7 +378,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/blacklands.jpg')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/blacklands.jpg')", style "background-position" "top" ]
                         [ h3 [] [ text "Blacklands" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -389,7 +391,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/bolt-2.jpg')" ), ( "background-position", "bottom" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/bolt-2.jpg')", style "background-position" "bottom" ]
                         [ h3 [] [ text "BOLT" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -402,7 +404,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/pysh.png')" ), ( "background-position", "top" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/pysh.png')", style "background-position" "top" ]
                         [ h3 [] [ text "!Pysh" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -414,7 +416,7 @@ view model =
                                 ]
                             ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/thundering-voices.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/thundering-voices.jpg')" ]
                         [ h3 [] [ text "Thundering Voices" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -422,7 +424,7 @@ view model =
                         [ p [] [ h5 [ class "inline" ] [ text "Thundering Voices" ], text " er et band som tviholder på den gamle rocken med en hånd, og samtidig strekker den andre ut for moderne rock med innslag av blues, samt groovy og funky vibber. Bandet holder til i Eidsvoll, og musikken beveger seg fra hardtslående og etablerte band som Thin Lizzy, AC/DC og Rival Sons - til groovy og bluesy artister som Phillip Sayce." ]
                         , p [] [ text "Medlemmene i gruppa kommer fra rake motsetninger innenfor musikkuniverset, som sprer seg fra tung metall og pop-punk, til tradisjonell rock. Til sammen tilføyer de hvert sitt personlige touch til sangene, samtidig som de har respekt for hvordan en låt av tungvekterne i musikkbransjen skal fremføres - med punktlighet og innlevelse. Å bevare feel-en og personligheten til en sang er essensielt - men samtidig, står ikke dette i veien for å angripe låter fra andre vinkler og blåse liv i andre oppbygninger, introer, soloer og avslutninger." ]
                         ]
-                    , div [ class "artist", style [ ( "background-image", "url('/images/artists/sorgen.jpg')" ) ] ]
+                    , div [ class "artist", style "background-image" "url('/images/artists/sorgen.jpg')" ]
                         [ h3 [] [ text "Sorgen" ]
                         , div [ class "show-more-button" ] []
                         ]
@@ -720,24 +722,24 @@ view model =
             --             ]
             --         ]
             --     ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/maria-skilt-ss.jpg')" ) ] ]
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/maria-skilt-ss.jpg')" ]
                 [ div [ class "attribution" ] [ text "Siri Saugstad" ] ]
             , div [ class "section" ]
                 [ h1 [] [ text "Hva er RønsenROCK?" ]
                 , p [] [ text "Ideen bak RønsenROCK dukket først opp på en bandøving i 2014. Alle band drømmer om et stort publikum, så hvorfor ikke sette Eidsvoll på kartet med tidenes rockefestival, og booke seg sjæl med i giggen? Dessuten: Hvor vanskelig kan det være å arrangere festival?" ]
                 , p [] [ text "Sommeren 2015 ble scene og utedasser bygget, og vi var i gang. Det viste seg fort at det heller ikke var umulig å finne en haug med rockere som ville komme å spille, og RønsenROCK var offisielt!" ]
-                , div [ class "divider-img-wrapper", style [ ( "background-image", "url('/images/festivalgjengen-tep.jpg')" ), ( "background-position", "top" ) ] ]
+                , div [ class "divider-img-wrapper", style "background-image" "url('/images/festivalgjengen-tep.jpg')", style "background-position" "top" ]
                     [ div [ class "attribution" ] [ text "Tom Erik Paulsen / EUB" ] ]
                 , div [ class "caption" ] [ text "RønsenROCK festivallag, bestående av Fredrik, Maria og Halvor." ]
                 , p [] [ text "Da det var duket for oppfølgeråret i 2016 måtte scenen ha en liten makeover, og er det noe dette festivallaget ikke mangler er det dugnadsånd! Venner og bekjente, frivillige og familie stilte opp og hjalp arrangørene med ny scene, salgsbu, hjemmesnekra ølkasser som går til banda som spiller, grillplass som brukes hyppig gjennom helga, hengekøyer, utvidet campområde, volleyballnett, og mye, mye mer! Alt for å gjøre denne helga helt spesiell." ]
                 , p [] [ text "Festivalen er tuftet på goodwill og det overordnede målet er å legge til rette for en langhelg med ekte rockeglede, sjukt bra musikk, sosialt samvær og varmt øl. Og målet blir nådd hvert år med god margin." ]
-                , div [ class "divider-img-wrapper", style [ ( "background-image", "url('/images/lydmann-tk.jpg')" ) ] ]
+                , div [ class "divider-img-wrapper", style "background-image" "url('/images/lydmann-tk.jpg')" ]
                     [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
                 , div [ class "caption" ] [ text "RønsenROCKs elskede lydmann, Håkon." ]
                 , p [] [ text "Festivalen har vokst og fortsetter å vokse. I prinsippet er dette en gratis festival, men arrangørene setter pris på økonomisk støtte fra deltakerne for å kunne opprettholde og utvikle festivalen videre. Det er viktig å understreke at RønsenROCK ikke hadde vært det det er i dag uten hjelp og støtte fra venner, familie og deltakere, og at dette er noe festivallaget setter ekstremt stor pris på." ]
                 , p [] [ text "Ta turen, sjekk det ut, du vil ikke angre!" ]
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/strand-mm.jpg')" ) ] ]
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/strand-mm.jpg')" ]
                 [ div [ class "attribution" ] [ text "Maria Martinsen" ] ]
             , div [ class "section" ]
                 [ div []
@@ -746,7 +748,7 @@ view model =
                     , p [] [ text "Det smaker som regel veldig godt etter en heftig natt." ]
                     ]
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/jokk-tk.jpg')" ) ] ]
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/jokk-tk.jpg')" ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
             , div [ class "section directions" ]
                 [ div []
@@ -770,7 +772,7 @@ view model =
                     ]
                 , div [ id "map" ] []
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/bowling-tk.jpg')" ), ( "background-position", "right" ) ] ]
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/bowling-tk.jpg')", style "background-position" "right" ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
             , div [ class "section" ]
                 [ h1 [] [ text "Hvor mye koster det?" ]
@@ -778,7 +780,7 @@ view model =
                 , p [] [ h5 [ class "inline" ] [ text "250,-" ], text " per dag eller ", h5 [ class "inline" ] [ text "350,-" ], text " for hele festivalen. Kontant, kort eller Vipps." ]
                 , p [] [ text "Du kan også bidra i etterkant av festivalen på kontonummer 8475 10 75285." ]
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/stemning3-tk.jpg')" ) ] ]
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/stemning3-tk.jpg')" ]
                 [ div [ class "attribution" ] [ text "Thomas Kvehaugen" ] ]
             , div [ class "section" ]
                 [ h1 [] [ text "Hva er hvor?" ]
@@ -802,7 +804,7 @@ view model =
                 , h4 [] [ text "Blir det fett?" ]
                 , p [] [ text "Ja." ]
                 ]
-            , div [ class "divider-img-wrapper-full", style [ ( "background-image", "url('/images/chill-2018.jpg')" ), ( "background-position", "right" ) ] ] []
+            , div [ class "divider-img-wrapper-full", style "background-image" "url('/images/chill-2018.jpg')", style "background-position" "right" ] []
             ]
         , footer []
             [ div []
@@ -822,9 +824,9 @@ view model =
 ---- PROGRAM ----
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
-    Html.program
+    Browser.element
         { view = view
         , init = init
         , update = update

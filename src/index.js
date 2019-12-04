@@ -1,13 +1,13 @@
 import "./styles/main.css";
-import { Main } from "./Main.elm";
+import { Elm } from "./Main.elm";
 import registerServiceWorker from "./registerServiceWorker";
 
-var app = Main.embed(document.getElementById("root"));
+var app = Elm.Main.init({ node: document.getElementById("root") });
 
 // registerServiceWorker();
 
 // Initilize JS stuff when Elm is ready
-app.ports.initializeJS.subscribe(function() {
+app.ports.initializeJS.subscribe(function () {
   $("#countdown").TimeCircles({
     animation: "smooth",
     circle_bg_color: "#dedede",
@@ -62,7 +62,7 @@ app.ports.initializeJS.subscribe(function() {
   });
 
   // Open/close artist bio when clicking artist image
-  $(".artist").click(function() {
+  $(".artist").click(function () {
     $(this).toggleClass("open");
     $(this)
       .nextAll(".artist-bio")
@@ -74,7 +74,7 @@ app.ports.initializeJS.subscribe(function() {
       .toggleClass("open");
   });
 
-  $(".event").click(function() {
+  $(".event").click(function () {
     $(this)
       .nextAll(".event-info")
       .first()
