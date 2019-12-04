@@ -186,9 +186,7 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+    flex-direction: column;
 
     > div {
       padding: 0 1rem;
@@ -390,25 +388,29 @@ iframe {
   overflow: hidden;
   background-color: #000000;
 
-  .date {
+  .header-bottom {
     color: @white;
     position: absolute;
     bottom: 0.5rem;
     @media (min-width: 768px) {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
     }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   #logo {
     position: absolute;
-    height: 80%;
-    width: 50%;
+    height: 50%;
+    width: 100%;
     @media (max-width: 768px) {
-      height: 90%;
-      width: 80%;
+      height: 40%;
     }
 
-    background-image: url("/images/logo-2019.png");
+    background-image: url("/images/logo-2018-mm-transparent.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
