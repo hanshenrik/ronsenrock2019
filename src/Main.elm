@@ -67,7 +67,7 @@ view model =
             ]
         , a [ id "facebook-icon", href "https://www.facebook.com/events/1276322845893719", target "_blank" ] [ i [ class "fab fa-facebook" ] [] ]
         , div [ class "main" ]
-            [ div [ class "divider-img-wrapper-full", style "background-image" "url('/images/tak-2018.jpg')", style "background-position" "center" ] []
+            [ div [ class "divider-img-wrapper-full", style "background-image" "url('/images/tak-2019.jpg')", style "background-position" "center" ] []
             , div [ class "section" ]
                 [ div [ class "program" ]
                     [ div [] [ h1 [] [ text "Torsdag 2. juli" ] ]
